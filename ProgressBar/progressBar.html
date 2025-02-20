@@ -20,15 +20,63 @@
     <!-- Progress Bar Diferents Colors-->
     <h3>Diferents Colors</h3>
     <div class="progress">
-        <div class="progress-bar bg-succes" style="width:70%;" >70%</div>
-        <div class="progress mt-2">
-            <div class="progress-bar bg-info" style="width: 50%;">50%</div>
-        </div>
-    
+        <div class="progress-bar bg-succes" style="width:100%;">100%</div>
+    </div>
+    <div class="progress mt-2">
+        <div class="progress-bar bg-info" style="width: 70%;">70%</div>
+    </div>
+    <div class="progress mt-2">
+        <div class="progress-bar bg-warning" style="width: 50%;">50%</div>
+    </div>
+
+    <div class="progress mt-2">
+        <div class="progress-bar bg-danger" style="width: 30%;">30%</div>
     </div>
     <hr>
-    <!--  -->
+    <!-- Progress Bar Animada -->
+    <h3>Barra Animada</h3>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:80%;">80%</div>
+    </div>
 
+    <!-- Progress Bar Multiples Seccions -->
+    <h3>Multiples Seccions</h3>
+    <div class="progress">
+        <div class="progress-bar bg-primary" style="width:40%;">40%</div>
+
+        <div class="progress-bar bg-info" style="width:60%;">60%</div>
+    </div>
+    <hr>
+    <div class="progress">
+        <div class="progress-bar bg-danger" style="width:25%;">25%</div>
+
+        <div class="progress-bar bg-warning" style="width:75%;">75%</div>
+    </div>
+    <hr>
+    
+    <!-- Progress Bar Dinamica -->
+    <h3>Progress Bar Dinámica</h3>
+    <div class="progress">
+        <div id="progressDinamica" class="progress-bar bg-danger" style="width:0%;">0%</div>
+    </div>
+
+    <button class="btn btn-primary mt-2" onclick="increaseBar()">Aumentar</button>
 </body>
+<script>
+ function increaseBar() {
+            let progressBar = document.getElementById("progressDinamica");
+            let currentWidth = parseInt(progressBar.style.width);
+
+            if (currentWidth < 100) {
+                let newWidth = currentWidth + 10;
+                progressBar.style.width = newWidth + "%";
+                progressBar.textContent = newWidth + "%";
+            } else {
+                // Reiniciar la barra a 0%
+                progressBar.style.width = "0%";
+                progressBar.textContent = "0%";
+            }
+        }
+</script>
 
 </html>
