@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Esdeveniments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <!-- Título -->
+        <header>
+            <h1 class="text-center">Web Esdeveniments</h1>
+        </header>
+        
+        <!-- Carrusel -->
+        
+
+
+
+        <!-- Button modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Reserva
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Dades Personals</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <!-- Nom -->
+                            <div class="mb-3">
+                                <label for="nom" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="nom" name="nom" required>
+                            </div>
+                            <!-- Cognom -->
+                            <div class="mb-3">
+                                <label for="cognom" class="form-label">Cognom</label>
+                                <input type="text" class="form-control" id="cognom" name="cognom" required>
+                            </div>
+                            <!-- Telèfon -->
+                            <div class="mb-3">
+                                <label for="telefon" class="form-label">Telèfon</label>
+                                <input type="tel" class="form-control" id="telefon" name="telefon" required>
+                            </div>
+                            <!-- Correu electrònic -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <!-- Esdeveniment -->
+                            <div class="mb-3">
+                                <label for="esdeveniment" class="form-label">Escull un esdeveniment</label>
+                                <select class="form-select" id="esdeveniment" name="esdeveniment" required>
+                                    <option value="" disabled selected>Selecciona un esdeveniment</option>
+                                    <option value="concert">Concert</option>
+                                    <option value="teatre">Teatre</option>
+                                    <option value="esport">Esport</option>
+                                </select>
+                            </div>
+                            <!-- Data i hora -->
+                            <div class="mb-3">
+                                <label for="dataHora" class="form-label">Data i Hora</label>
+                                <input type="datetime-local" class="form-control" id="dataHora" name="dataHora"
+                                    required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
